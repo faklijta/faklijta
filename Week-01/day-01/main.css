@@ -1,0 +1,35 @@
+header{
+    height: 100px;
+    background:black;
+    border:1px solid #CCC;
+    width:100%;
+    margin:0px auto;
+    image-orientation: left;
+    }
+img{
+    width:10%;
+}
+a{
+    orientation: landscape;
+    color: magenta;
+}
+body {
+    background-image: url("topography.png");
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
+    color: #0D0C0C;
+    font-family: "Helvetia";
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 2em 2em 4em;
+}
+span{
+    align: center;
+}
+h2{
+    text-align: center;
+}
+h3{
+    color: magenta;
+}
