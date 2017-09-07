@@ -4,43 +4,24 @@ p {
     display: inline-block;
     border-radius: 100%;
     text-align: center;
-    padding: 55px;
+    padding: 65px;
     margin: 5px;
     background-color: #0CEBDE;
     font-size: 35px;
     font-weight: bold;
     color: white;
-    text-align: right;
-    
+
 }
 .first{
-    box-sizing: border-box;
-    border: 10px solid #B90CEB;
-    border-radius: 100%;
-    height: 100px;
-    width: 100px;
-    padding: 50px;
     background:#B90CEB;
    
 }
 .middle{
-    box-sizing: border-box;
-    border: 10px solid #0CEBDE;
-    border-radius: 100%;
-    height: 100px;
-    width: 100px;
-    padding: 50px;
     background:#0CEBDE;
     
 }
 
 .last{
-    box-sizing: border-box;
-    border: 10px solid #EBBE0C;
-    border-radius: 100%;
-    height: 100px;
-    width: 100px;
-    padding: 50px;
     background:#EBBE0C;
 
 }
