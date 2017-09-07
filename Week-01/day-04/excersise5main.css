@@ -1,0 +1,35 @@
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: rgb(255, 109, 71);
+    margin-bottom: 10px;
+}
+h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 26px;
+    color: #8F2BE2;
+    margin-bottom: 20px;
+
+}
+article{
+    font-size: 16px;
+    width: 400px;
+    color: black;
+    margin-bottom: 10px;
+}
+ol{
+    font-size: 16px;
+    color: palevioletred;
+    text-decoration: underline;
+    text-decoration-color: palevioletred; 
+}
+ul{
+    font-size: 16px;
+    color: black;
+    
+
+}
+li:last-child{
+    color: black;
+    text-decoration-color: black;
+}
