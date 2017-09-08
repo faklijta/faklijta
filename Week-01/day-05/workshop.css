@@ -1,0 +1,59 @@
+/* Base form*/
+.main{
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: #127731;
+    width: 820px;
+    height: 900px;
+    position: relative;
+}
+body{
+    width: 820px;
+    height: 920px;
+    margin: 0 auto;
+    box-sizing: border-box; 
+}
+.top{
+    box-sizing: border-box;
+    display: inline-block;
+    border: 0px;
+    width: 820px;
+    height: 60px;
+    background: #FFE42E;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    
+}
+.middle{
+    box-sizing: border-box;
+    display: inline-block;
+    border: 0px;
+    width: 407px;
+    height: 430px;
+    background: #FFE42E;
+    margin: 0 auto;
+    padding: 20px;
+}
+.middleright{
+    box-sizing: border-box;
+    display: inline-block;
+    border: 0px;
+    width: 407px;
+    height: 430px;
+    background: #FFE42E;
+    margin: 0 auto;
+    padding: 20px;
+}
+.bottom{
+    box-sizing: border-box;
+    border: 0px;
+    width: 820px;
+    height: 100px;
+    background: #FFE42E;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
