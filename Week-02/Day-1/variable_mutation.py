@@ -62,7 +62,7 @@ if g2*2 > g1:
 
 h = 1357988018575474
 # tell if it has 11 as a divisor (pras a boolean)
-if h / 11:
+if h % 11 == 0:
     print(True)
 
 
@@ -77,7 +77,7 @@ if i1 > i2**2 and i1 < i1**3:
 
 j = 1521
 # tell if j is dividable by 3 or 5 (pras a boolean)
-if j/3 or j/5:
+if j%3 == 0 or j%5 == 0:
     print (True)
 
 
