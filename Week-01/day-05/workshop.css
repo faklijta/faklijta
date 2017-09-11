@@ -49,7 +49,7 @@ body{
 }
 .subhead{
     font-weight: bold;
-    display: inline-block;
+    display: block;
 }
 .star{
     color: red;
