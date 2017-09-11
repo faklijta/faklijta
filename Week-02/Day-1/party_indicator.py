@@ -12,3 +12,15 @@
 #
 # It should print: Sausage party
 # If no girls are coming, regardless the count of the people
+girls =int(input('add number of girls'))
+boys =int(input('add number of boys'))
+if boys == girls:
+    if boys + girls > 20:
+        print ('The party is exellent!')
+if boys != girls:
+    if boys + girls > 20:
+        print ('Quite cool party!')
+if boys + girls < 20:
+        print ('Average party...')
+if girls == 0:
+        print ('Sausage party')
