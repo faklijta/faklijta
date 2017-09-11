@@ -1,7 +1,8 @@
 a = 24
 out = 0
 # if w is even increment out by one
-
+if a / 2:
+    out += 1
 
 print(out)
 
@@ -13,7 +14,9 @@ out2 = ""
 # if b is between 10 and 20 set out2 to "Sweet!"
 # if less than 10 set out2 to "More!",
 # if more than 20 set out2 to "Less!"
-
+if b > 10:
+    if b < 20:
+        out2 = "Sweet!"
 
 print(out2)
 
