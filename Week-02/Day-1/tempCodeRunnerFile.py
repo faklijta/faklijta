@@ -1,0 +1,1 @@
+x = int(input("add your mom's age: "))
