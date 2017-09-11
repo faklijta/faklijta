@@ -7,3 +7,10 @@
 # Print the percentage of the coding hours in the semester if the average
 # work hours weekly is 52
 
+daily = 6
+
+semester = 17
+print(daily* 5 * semester)
+
+weekly_wh = 52
+print((daily*5*semester)/(weekly_wh*17)*100)
