@@ -8,3 +8,6 @@
 #  John Doe
 #  31
 #  1.87
+print("Tania")
+print("34")
+print("1.67")
