@@ -13,4 +13,4 @@ semester = 17
 print(daily* 5 * semester)
 
 weekly_wh = 52
-print((daily*5*semester)/(weekly_wh*17)*100)
+print(((daily*5*semester)/(weekly_wh*17)*100) + str('%')
