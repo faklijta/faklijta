@@ -30,7 +30,14 @@ is_bonus = False
 # if credits are smaller than 50,
 # and is_bonus is false decrement c by 1
 # if is_bonus is true c should remain the same
-
+if credits >= 50
+    if is_bonus is False:
+        c -= 2
+if credits < 50
+    if is_bonus is False:
+        c -= 1
+if is_bonus is True:
+    c = c
 
 print(c)
 
