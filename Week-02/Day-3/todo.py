@@ -11,5 +11,7 @@
 
 todoText = " - Buy milk\n"
 todoText = "My todo" + todoText[0:-1]
+todoText = todoText[ : ] +", "+ "Download games"
+todoText = todoText[ : ] +", "+ "   Diablo"
 
 print(todoText)
