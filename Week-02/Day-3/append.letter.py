@@ -12,9 +12,3 @@ def create_new_verbs(verb,preverb):
         
 create_new_verbs(verbs,preverb)
 
-# def create_new_verbs(preverb):
-#     for i in range(len(verbs)):
-#         cc = preverb + verbs[i]
-#         print(cc)
-
-# create_new_verbs(preverb)
