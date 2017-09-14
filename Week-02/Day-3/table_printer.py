@@ -21,25 +21,5 @@ ingredients = [
 	{ "name": "soda", "in_stock": 0, "needs_cooling": True }
 ]
 def table(ingredients):
-    key = []
-    for i in ingredients[0]:
-        key.append(i)
-    cooling = (key[2])
-    stock = (key[1])
-    name = []
-    for j in ingredients:
-        name.append(j["name"])
-    print("+" + "--------------------" + "+" + "---------------" + "+" + "----------"* + "+\n")
-    print("| Ingredient" + " " + "| Needs cooling | In stock |\n")
-    print("+" + "--------------------" + "+" + "---------------" + "+" + "----------" + "+\n")
-    for k in ingredients:
-        fridge = ""
-        if k["needs_cooling"]:
-            frindge  = "Yes"
-        else:
-            fridge = "No"
-        if k["in_stock"] == 0:
-            k["in_stock"] = "-"
-        print("| " + k["name"] + " " + "| " + fridge + " " + "| " + str(k["in_stock"]) + " " + "|\n")
-    print("+" + "--------------------"+ "+" + "---------------" + "+" + "----------" + "+\n")
+    
 table(ingredients)
