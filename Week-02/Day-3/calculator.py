@@ -19,20 +19,23 @@
 
 user_input = input("Please type in the expression:")
 user_input = user_input.split(" ")
+
 operator = user_input[0]
 operand1 = int(user_input[1])
 operand2 = int(user_input[2])
+
 def calculator(operation,operan1,operan2): 
     if operation == "+":
-        return operand1 + operand2
+        result = operand1 + operand2
     if operation == "-":
-        return operand1 - operand2
+        result = operand1 - operand2
     if operation == "*":
-        return operand1 * operand2
+        result = operand1 * operand2
     if operation == "/":
-        return operand1 / operand2
+        result = operand1 / operand2
     if operation == "%":
-        return operand1 % operand2
+        result = operand1 % operand2
+    return result
 calculation = calculator(operator,operand1,operand2)
 print(calculation)
 
