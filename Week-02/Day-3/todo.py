@@ -10,8 +10,8 @@
 #      - Diablo
 
 todoText = " - Buy milk\n"
-todoText = "My todo" + todoText[0:-1]
-todoText = todoText[ : ] +", "+ "Download games"
-todoText = todoText[ : ] +", "+ "   Diablo"
+todoText = "My todo \n" + todoText[0:-1] + '\n'
+todoText = todoText[ : ] + " - Download games \n"
+todoText = todoText[ : ] + "      -Diablo"
 
 print(todoText)
