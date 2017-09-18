@@ -2,6 +2,7 @@
 # divides ten with it,
 # and prints the result.
 # it should print "fail" if the parameter is 0
+
 number = int(input("please add a number"))
 
 def divide(number):
@@ -11,4 +12,3 @@ def divide(number):
     except ZeroDivisionError:
         print("fail")
 divide(number)
-
