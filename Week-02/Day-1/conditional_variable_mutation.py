@@ -6,9 +6,6 @@ if a / 2:
 
 print(out)
 
-
-
-
 b = 13
 out2 = ""
 # if b is between 10 and 20 set out2 to "Sweet!"

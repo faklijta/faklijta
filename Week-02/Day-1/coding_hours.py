@@ -10,7 +10,9 @@
 daily = 6
 
 semester = 17
-print(daily* 5 * semester)
+value = daily* 5 * semester
+print(value)
 
 weekly_wh = 52
-print(((daily*5*semester)/(weekly_wh*17)*100) + str('%')
+percentage_of_coding_hours = ((daily*5*semester)/(weekly_wh*17)*100)
+print(str(percentage_of_coding_hours) + " %")

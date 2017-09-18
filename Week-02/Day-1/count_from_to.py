@@ -11,3 +11,10 @@
 # 3
 # 4
 # 5
+number1 = int(input('Plese add a number'))
+number2 = int(input('Plese add an other number, it should be bigger'))
+if number2 < number1:
+    print("The second number should be bigger")
+else:
+    for range((number2-number1) > 0)
+        print(number1 + 1)
