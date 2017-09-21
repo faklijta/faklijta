@@ -4,4 +4,5 @@ def counter(n):
         return 0
     else:
         return counter(n-1)
-print(counter(5))
+
+print(counter(4))
