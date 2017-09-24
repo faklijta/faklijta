@@ -13,3 +13,10 @@
 # 8 * 15 = 120
 # 9 * 15 = 135
 # 10 * 15 = 150
+
+multiplicator = int(input("please add a number: "))
+def multiplication_table():
+    for number in range(1, 11):
+        print(multiplicator * number)
+
+multiplication_table()
