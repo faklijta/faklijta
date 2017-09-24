@@ -8,7 +8,7 @@
 import random
 random_number = random.randint(0,100)
 user_number = int(input("choose a number between 0 and 100: "))
-if user_number != random_number:
+while user_number != random_number:
     if user_number > random_number:
         print('The stored number is lower')
     if user_number < random_number:

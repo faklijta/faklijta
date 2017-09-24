@@ -18,7 +18,6 @@ if b > 10:
 print(out2)
 
 
-
 c = 123
 credits = 100
 is_bonus = False
