@@ -4,3 +4,10 @@
 # integers like:
 #
 # Sum: 22, Average: 4.4
+
+number_of_numbers = int(input("Please how many numbers would you add: ")
+for numbers in range(number_of_numbers)
+    summa = []
+    number = int(input("please add a number"))
+    summa.append(number)
+    print("Sum: " + summa +',' + " average: " + summa/number_ofnumbers)
