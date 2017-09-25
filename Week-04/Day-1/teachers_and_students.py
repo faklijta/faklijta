@@ -1,12 +1,18 @@
 class Teacher(object):
 
-    def teach(student):
-        student.learn()
-    def answer(self)
+    def teach(self):
+        Student.learn()
+    def answer(self):
+        pass
 
 
 class Student(object):
     
     def learn(self):
-    def question(teacher):
-        teacher.answer()
+        pass
+    def question(self):
+        Teacher.answer()
+
+student = Student()
+teacher1 = Teacher()
+student.question(teacher1)
