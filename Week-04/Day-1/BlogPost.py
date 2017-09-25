@@ -1,5 +1,5 @@
 
-class BlogPost:
+class BlogPost(object):
     author_name = ""
     title = ""
     text = ""
