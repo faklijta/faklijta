@@ -1,22 +1,24 @@
-class Sharpie(object):
-
-    def __init__(self, color, width):
-        self.color = str(color)
-        self.width = float(width)
-        self.ink_amount = 100
-    
-    def use(self):
-        self.ink_amount -= 1
+from Sharpie import Sharpie
 
 class SharpieSet(object):
 
     def __init__(self):
-        pass
+        self.sharpies = []
 
     def count_usable(self):
-        if sharpie.ink_amount > 0:
-        return sharpie.color()
+        self.usable = 0
+        for sharpie in self.sharpie_list:
+            if sharpie.ink_amount > 0:
+                self.usable += 1
+        return sharpie.usable
 
     def remove_trash(self):
-        if sharpie.ink_amount == 0:
-            pass
+        for sharpie in self.sharpie_list:
+            if sharpie.ink_amount == 0:
+                self.sharpie.remove(sharpie)
+        return self.sharpie
+
+sharpie_list1 = SharpieSet
+sharpie1 = Sharpie("red", 8.9)
+print(sharpie_list1.count_usable)
+print(sharpie_list1.remove_trash)
