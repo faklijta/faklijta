@@ -1,6 +1,6 @@
 import unittest
 from tania_faklijer_work import Apple
-from tania_faklijer_work import Sum, Anagram, CountLetters
+from tania_faklijer_work import Sum, Anagram, CountLetters, Fibonacci
 
 class AppleTestCases(unittest.TestCase):
 
@@ -54,6 +54,15 @@ class CountLettersTestCase(unittest.TestCase):
         test_word = CountLetters()
         self.assertEqual(test_word.count_letters('kacsa')['a'] , 2)
 
+class FibonacciTestCases(unittest.TestCase):
+
+    def test_if_less_then_two(self):
+        test_n = Fibonacci()
+        self.assertTrue(test_n.fibonacci(1), 1)
+
+    def test_if_two(self):
+        test_n = Fibonacci()
+        self.assertTrue(test_n.fibonacci(2), 2)        
 
 
 if __name__ == '__main__':
