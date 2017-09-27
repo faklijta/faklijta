@@ -24,14 +24,14 @@ class TestExtend(unittest.TestCase):
     def test_median_five(self):
         self.assertEqual(extend.median([1,2,3,4,5]), 3)
 
-    def test_is_vovel_a(self):
-        self.assertTrue(extend.is_vovel('a'))
+    def test_is_vovel_ú(self):
+        self.assertTrue(extend.is_vovel('ú'))
 
-    def test_is_vovel_u(self):
-        self.assertTrue(extend.is_vovel('u'))
+    def test_is_vovel_p(self):
+        self.assertFalse(extend.is_vovel('p'))
 
-    def test_translate_bemutatkozik(self):
-        self.assertEqual(extend.translate('bemutatkozik'), 'bevemuvutavatkovozivik')
+    def test_translate_alma(self):
+        self.assertEqual(extend.translate('alma'), 'avalmava')
 
     def test_translate_kolbice(self):
         self.assertEqual(extend.translate('kolbice'), 'kovolbiviceve')
