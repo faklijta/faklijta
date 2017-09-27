@@ -15,9 +15,21 @@ class Sum(object):
 
 class Anagram(object):
 
-    def anagram(self, list1, list2):
-        compare = list(list1)
-        compare_to = list(list2)
-        if compare.sort() == compare_to.sort():
-            return True 
- 
+    def anagram(self, word1, word2):
+        if len(word1) == len(word2):
+            if sorted(word1) == sorted(word2):
+                return True
+        return False
+
+
+class CountLetters(object):
+
+    def count_letters(self, word):
+        number_of_letters = {}
+        for letter in word:
+            if letter in number_of_letters:
+                number_of_letters[letter] += 1
+            else:
+                number_of_letters[letter] = 1
+        return number_of_letters
+
