@@ -30,11 +30,11 @@ class SumTestCases(unittest.TestCase):
         test_list_of_numbers = Sum()
         self.assertEquals(test_list_of_numbers.sum(None), None)       
 
-# class AnagramTestCase(unittest.TestCase):
+class AnagramTestCase(unittest.TestCase):
 
-#     def test_anagram(self):
-#         test_anagram = Anagram()
-#         self.assertTrue(test_anagram)
+    def test_anagram(self):
+        test_anagram = Anagram()
+        self.assertTrue(test_anagram)
 
 
 if __name__ == '__main__':

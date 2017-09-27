@@ -13,11 +13,11 @@ class Sum(object):
             return sum(list_of_numbers)
 
 
-# class Anagram(object):
+class Anagram(object):
 
-#     def anagram(self, list1, list2):
-#         compare = list(list1)
-#         compare_to = list(list2)
-#         if compare.sort() == compare_to.sort():
-#             return True 
+    def anagram(self, list1, list2):
+        compare = list(list1)
+        compare_to = list(list2)
+        if compare.sort() == compare_to.sort():
+            return True 
  
