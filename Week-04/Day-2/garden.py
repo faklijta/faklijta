@@ -9,63 +9,62 @@ class Garden(object):
     def watering(self, amount):
         self.needs_water = []
         for plants in self.flowers_trees:
-            if plants.water_need() == "needs water":
+            if plants.water_status() == "needs water":
                 self.needs_water.append(plants)
         for plants in self.needs_water:
-            plants.watering(amount/len(self.needs_water))
-        return self
-    
-    def __repr__(self):
-        all_plants = ""
-        for plant in range(len(self.flowers_trees)):
-             all_plants += str(self.flowers_trees[plant]) + "\n"
-        return all_plants
+            plants.watering(amount/len(self.needs_water)) 
 
+    def status(self):
+        for plant in self.flowers_trees:
+            plant.printer()
 
+        
 class Plant(object):
-    def __init__(self, color, amount=0):
-        self.amount = amount
+    def __init__(self, color):
+        self.amount_water = 0
         self.color = color
-        self.watering_index = 0
+        self.plant_type = "plant"
+        self.water_needed = 0
+        self.absorbtion = 0
+
+    def water_status(self):
+        if self.amount_water < self.water_needed:
+            return "needs water"
+        else:
+            return "does not need water"
+
+    def watering(self, added_water):
+        self.amount_water = added_water * self.absorbtion
+
+    def printer(self):
+        print("The " + self.color + " " + self.plant_type + " " + self.water_status())
+
+
+class Tree(Plant):
+
+    def __init__(self, color):
+        super().__init__(color)
+        self.water_needed = 10
+        self.absorbtion = 0.4
+        self.plant_type = "Tree"
 
 
 class Flower(Plant):
 
-    def water_need(self):
-        if self.amount < 5:
-            return "needs water"
-        else:
-            return "does not needs water"
-
-    def watering(self, amount=0):
-        self.amount += amount * 0.75
-
-    def __repr__(self):
-        return "The {} flower {}.".format(self.color, self.water_need())
-
-
-class Trees(Plant):
-
-    def water_need(self):
-        if self.amount < 10:
-            return "needs water"
-        else:
-            return "does not needs water"
-    
-    def watering(self, amount = 0):
-        self.amount += amount * 0.4
-    
-    def __repr__(self):
-        return "The {} tree {}.".format(self.color, self.water_need())
+    def __init__(self, color):
+        super().__init__(color)
+        self.water_needed = 5
+        self.absorbtion = 0.75
+        self.plant_type = "Flower"
 
 garden = Garden()
 garden.add(Flower("yellow"))
 garden.add(Flower("blue"))
-garden.add(Trees("purple"))
-garden.add(Trees("orange"))
-print(garden)
+garden.add(Tree("purple"))
+garden.add(Tree("orange"))
+garden.status()
 garden.watering(40)
-print(garden)
+garden.status()
 garden.watering(70)
-print(garden)
+garden.status()
     
