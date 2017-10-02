@@ -23,6 +23,10 @@ def on_key_press(e):
         myApp.move(0,-10)
     elif( e.keysym == 'Down' ):
         myApp.move(0,10)
+    elif( e.keysym == 'Left' ):
+        myApp.move(-10,0)
+    elif( e.keysym == 'Right' ):
+        myApp.move(10,0)
 
 # Tell the canvas that we prepared a function that can deal with the key press events
 root.bind("<KeyPress>", on_key_press)
