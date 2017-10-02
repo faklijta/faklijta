@@ -2,7 +2,8 @@ from tkinter import *
 from PIL import Image, ImageTk
 
 root = Tk()
-canvas = Canvas(root, width='600', height= '600')
+canvas = Canvas(root, width='720', height= '720')
+# tilemap = [[0,0,0,0,0,0,0,0,0,0]]
 
 
 # class Map(object):
@@ -12,13 +13,25 @@ canvas = Canvas(root, width='600', height= '600')
 #     def is_wall():
 #         pass
 
-    # def get_tile(self, x, y):
+
+# image = canvas.create_image(0, 0, anchor=NW, image=filename)
+# def get_tile(x, y):
 filename = PhotoImage(file="floor.png")
-image = canvas.create_image(0, 0, anchor=NW, image=filename)
+x = 0
+y = 0
+for row in range(10):
+    for column in range(10):
+        canvas.create_image(x, y, anchor=NW, image=filename)
+        x += 72
+    x = 0
+    y += 72
+
 
     # def get_cell():
     #     pass
-
+# map1= Map()
+# map1.get_tile(0,0)
+# get_tile(0,0)
 canvas.pack()
 
 root.mainloop()
