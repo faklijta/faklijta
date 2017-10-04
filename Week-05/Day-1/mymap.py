@@ -30,3 +30,8 @@ class Map(object):
                         self.x += self.tile_size
                 self.x = 0
                 self.y += self.tile_size
+    
+    def get_cell(self, x, y):
+        x = int(x/72)
+        y = int(y/72)
+        return self.tilemap[x][y]
