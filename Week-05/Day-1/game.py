@@ -1,6 +1,6 @@
 from tkinter import *
 from mymap import Map
-from entity import Hero
+from entity import Hero, Skeleton, Boss
 
 
 class Game(object):
@@ -13,8 +13,14 @@ class Game(object):
         self.map = Map()
         self.map.draw_map(canvas)
         self.hero = Hero(canvas)
-        self.hero.draw_entity(0, 0)
+        self.hero.draw_hero(0, 0)
         self.hero.update_entity(self.hero.hero_down)
+        self.skeleton = Skeleton(canvas)
+        self.boss = Boss(canvas)
+        self.skel_num = 3
+        self.coordinates = self.map.create_random_coordinates(self.skel_num + 1)
+        self.skeleton.draw_skeleton(self.coordinates[:-1])
+        self.boss.draw_boss(self.coordinates[-1])
         root.bind("<KeyPress>", self.on_key_press)
         canvas.pack()
         root.mainloop()
@@ -37,6 +43,6 @@ class Game(object):
             self.hero.update_entity(self.hero.hero_left)
             if self.map.is_wall(self.hero.x - self.map.tile_size, self.hero.y) == False:
                 self.hero.move(- self.map.tile_size, 0)
-            
+
 
 game = Game()

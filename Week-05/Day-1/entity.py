@@ -1,11 +1,18 @@
 from tkinter import *
 import random
+from mymap import Map
 
 class Entity(object):
 
-    def __init__(self):
-        self.x = x
-        self.y = y
+    def __init__(self, canvas):
+        self.canvas = canvas
+        
+        # self.x = x
+        # self.y = y
+    
+    # def draw_entity(self, image, coords):
+    #     self.entity = self.canvas.create_image(coords[0]*72, coords[1]*72, anchor=NW, image=image)
+    #     return self.entity 
 
 class Hero(Entity):
     
@@ -19,7 +26,7 @@ class Hero(Entity):
         self.hero_right = PhotoImage(file="hero-right.png")
         self.canvas = canvas
 
-    def draw_entity(self, x, y):
+    def draw_hero(self, x, y):
         self.hero = self.canvas.create_image(x, y, anchor=NW, image = self.hero_down)
         
     def update_entity(self, img):
@@ -31,17 +38,30 @@ class Hero(Entity):
         self.x += dx
         self.y += dy
 
-# class Skeleton(Entity):
+class Skeleton(Entity):
 
-#     def __init__(self, canvas):
-#         self.skeleton = None
-#         self.x = 0
-#         self.y = 0
-#         self.skeleton = PhotoImage(file="skeleton.png")
-#         self.canvas = canvas
+    def __init__(self, canvas):
+        self.skeleton_image = None
+        # self.x = 0
+        # self.y = 0
+        self.skeleton_file = PhotoImage(file="skeleton.png")
+        self.canvas = canvas
 
-#     def draw_skeleton(self):
-#         self.skeleton1 = self.draw_entity(self.skeleton, )
+        
+    def draw_skeleton(self, coordinates):
+        for i in range(len(coordinates)):
+            self.skeleton = self.canvas.create_image(coordinates[i][0], coordinates[i][1], anchor=NW, image=self.skeleton_file)
+
+
+class Boss(Entity):
+
+    def __init__(self, canvas):
+        self.boss_image = None
+        self.boss_file = PhotoImage(file = "boss.png")
+        self.canvas = canvas
+
+    def draw_boss(self, spot):
+        self.boss = self.canvas.create_image(spot[0], spot[1], anchor=NW, image=self.boss_file)
 
 #     def move_skeleton(self, dx, dy):
 #         self.canvas.move(self.skeleton, dx, dy)    

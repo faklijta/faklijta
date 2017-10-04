@@ -1,4 +1,5 @@
 from tkinter import *
+from random import *
 
 class Map(object):
 
@@ -35,15 +36,23 @@ class Map(object):
     def is_wall(self, x, y):
         cell_x = x//self.tile_size 
         cell_y = y//self.tile_size 
-        print('x' + str(x))
-        print('y' + str(y))
         if cell_x >= 0 and cell_x < len(self.tilemap[0]) and cell_y >= 0 and cell_y < len(self.tilemap):
             return self.tilemap[cell_y][cell_x] == 1
         else:
             return True
 
     
-    # def get_cell(self, x, y):
-    #     x = int(x/72)
-    #     y = int(y/72)
-    #     return self.tilemap[x][y]
+    def get_cell(self, x, y):
+        x = int(x/72)
+        y = int(y/72)
+        return self.tilemap[y][x]
+
+
+    def create_random_coordinates(self, skel_num):
+        coordinates = []
+        while len(coordinates) != skel_num:
+            x = randint(0, len(self.tilemap[0]) - 1)
+            y = randint(0, len(self.tilemap) - 1)
+            if self.tilemap [y][x] == 0 and [x, y] not in coordinates and [x, y] != [0, 0]:
+                coordinates.append([x * self.tile_size, y * self.tile_size])
+        return coordinates
