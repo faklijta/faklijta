@@ -1,4 +1,5 @@
 from tkinter import *
+import random
 
 class Entity(object):
 
@@ -6,7 +7,7 @@ class Entity(object):
         self.x = x
         self.y = y
 
-class Hero(object):
+class Hero(Entity):
     
     def __init__(self, canvas):
         self.hero = None
@@ -27,3 +28,20 @@ class Hero(object):
 
     def move(self, dx, dy):
         self.canvas.move(self.hero, dx, dy)
+        self.x += dx
+        self.y += dy
+
+# class Skeleton(Entity):
+
+#     def __init__(self, canvas):
+#         self.skeleton = None
+#         self.x = 0
+#         self.y = 0
+#         self.skeleton = PhotoImage(file="skeleton.png")
+#         self.canvas = canvas
+
+#     def draw_skeleton(self):
+#         self.skeleton1 = self.draw_entity(self.skeleton, )
+
+#     def move_skeleton(self, dx, dy):
+#         self.canvas.move(self.skeleton, dx, dy)    
