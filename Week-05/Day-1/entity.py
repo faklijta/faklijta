@@ -60,8 +60,8 @@ class Boss(Entity):
         self.boss_file = PhotoImage(file = "boss.png")
         self.canvas = canvas
 
-    def draw_boss(self, spot):
-        self.boss = self.canvas.create_image(spot[0], spot[1], anchor=NW, image=self.boss_file)
+    def draw_boss(self, coordinates):
+        self.boss = self.canvas.create_image(coordinates[0], coordinates[1], anchor=NW, image=self.boss_file)
 
 #     def move_skeleton(self, dx, dy):
 #         self.canvas.move(self.skeleton, dx, dy)    

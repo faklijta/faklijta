@@ -1,5 +1,5 @@
 from tkinter import *
-from mymap import Map
+from mymap import Map, Hud
 from entity import Hero, Skeleton, Boss
 
 
@@ -7,7 +7,7 @@ class Game(object):
 
     def __init__(self):
         root = Tk()
-        canvas_height = 720
+        canvas_height = 700
         canvas_width = 720
         canvas = Canvas(root, width=canvas_width, height=canvas_height)
         self.map = Map()
@@ -21,6 +21,8 @@ class Game(object):
         self.coordinates = self.map.create_random_coordinates(self.skel_num + 1)
         self.skeleton.draw_skeleton(self.coordinates[:-1])
         self.boss.draw_boss(self.coordinates[-1])
+        self.hud = Hud()
+        self.hud.draw_hud(canvas, 0, 650)
         root.bind("<KeyPress>", self.on_key_press)
         canvas.pack()
         root.mainloop()

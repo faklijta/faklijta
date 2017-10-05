@@ -17,8 +17,7 @@ class Map(object):
                         [0,1,0,1,0,0,0,0,1,0],
                         [0,1,0,1,0,0,0,0,1,0],
                         [0,0,0,0,0,0,0,0,1,0],
-                        [0,1,1,1,0,0,0,0,1,0],
-                        [0,0,0,1,0,0,1,0,0,0]]
+                        [0,1,1,1,0,0,0,0,1,0]]
 
 
     def draw_map(self, canvas):
@@ -32,6 +31,7 @@ class Map(object):
                     self.x += self.tile_size
             self.x = 0
             self.y += self.tile_size
+
     
     def is_wall(self, x, y):
         cell_x = x//self.tile_size 
@@ -56,3 +56,14 @@ class Map(object):
             if self.tilemap [y][x] == 0 and [x, y] not in coordinates and [x, y] != [0, 0]:
                 coordinates.append([x * self.tile_size, y * self.tile_size])
         return coordinates
+
+    
+class Hud(object):
+
+    def __init__(self):
+        self.x = 0
+        self.y = 0
+    
+
+    def draw_hud(self, canvas, x, y):
+        canvas.create_text(x, y, font=(12), anchor=NW, text=" Hero " + "(Level 1) " + "HP: 10/10 " + "|" + " DP: 8" + "|" + " SP: 6" )
