@@ -1,0 +1,31 @@
+body{
+    background: #eeeeee;
+}
+
+.container {
+    background: #ffffff;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.container:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.green {
+    background: #51D400;
+    float: left;
+}
+.yellow{
+    background: #FFD62A;
+    float: left;
+}
+.purple {
+    background: #B02AFF;
+    float: left;
+}
+.item {
+    height: 100px;
+    width: 33%;
+}
