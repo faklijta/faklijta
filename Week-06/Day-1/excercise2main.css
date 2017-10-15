@@ -1,0 +1,29 @@
+body{
+    background: #eeeeee;
+}
+
+.container {
+    background: #ffffff;
+    max-width: 960px;
+    margin: 0 auto;
+    height: 600px;
+    width: 960px;
+    position: relative;
+}
+.container:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.yellow{
+    background: #FFD62A;
+    height: 100%;
+}
+.purple {
+    background: #B02AFF;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    left: 370px;
+    top: 200px;
+}
