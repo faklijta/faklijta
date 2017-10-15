@@ -9,6 +9,9 @@ body{
     padding: 20px;
     height: 600px;
     width: 960px;
+    display: flex;
+    flex-flow: column;
+
 }
 .container:after{
     content: "";
@@ -18,15 +21,17 @@ body{
 .green {
     background: #51D400;
     height: 25%;
+    order: 1;
 }
 .yellow{
     background: #FFD62A;
     height: 50%;
-    float: bottom;
+    order: 3;
 }
 .purple {
     background: #B02AFF;
     height: 25%;
+    order: 2;
 }
 .item {
     width: 960px; 
