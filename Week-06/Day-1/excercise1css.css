@@ -7,6 +7,8 @@ body{
     max-width: 960px;
     margin: 0 auto;
     padding: 20px;
+    height: 600px;
+    width: 960px;
 }
 .container:after{
     content: "";
@@ -15,20 +17,17 @@ body{
 }
 .green {
     background: #51D400;
-    float: right;
-    width: 25%;
+    height: 25%;
 }
 .yellow{
     background: #FFD62A;
-    float: right;
-    width: 50%;
+    height: 50%;
+    float: bottom;
 }
 .purple {
     background: #B02AFF;
-    float: left;
-    width: 25%;
+    height: 25%;
 }
 .item {
-    height: 100px;
-    
+    width: 960px; 
 }
