@@ -10,7 +10,7 @@ body{
     height: 600px;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     position: absolute;
     }
 
@@ -18,8 +18,9 @@ body{
     background: #B02AFF;
     width: 100px;
     height: 100px;
+    margin-left: 10px;
     position: relative;
-    top: 300px;
+    top: 500px;
     left: 0px;
 }
 
