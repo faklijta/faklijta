@@ -15,12 +15,12 @@ body{
 }
 .green {
     background: #51D400;
-    float: left;
+    float: right;
     width: 25%;
 }
 .yellow{
     background: #FFD62A;
-    float: left;
+    float: right;
     width: 50%;
 }
 .purple {
