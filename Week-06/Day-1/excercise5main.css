@@ -34,11 +34,15 @@ body{
     left: 200px;
     top: 100px;
 }
-.black_box{
+.main:after {
+    content: "";
+    height: 40px;
+    width: 40px;
+    display: block;
     background: black;
-    height: 50px;
-    width: 50px;
-    position: fixed;
+    position: relative;
+    right:  -550px;
+    bottom: -350px;
 }
 .left_sidebar{
     background: #FEA500;
