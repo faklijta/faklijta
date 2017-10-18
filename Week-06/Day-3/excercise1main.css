@@ -1,0 +1,29 @@
+body{
+    background: #3E94EC;
+}
+
+table{
+    width: 600px;
+    height: 600px;
+    color: grey;
+    background: #9EA7AF;   
+    font-size: 32px;
+    color: #656A85;
+    text-align: left;
+    font-family: sans-serif;   
+}
+th{
+    height: 100px;
+    font-weight: normal;    
+}
+tbody tr:nth-child(odd){
+    background: #EBEBEB;
+}
+tbody tr:nth-child(even){
+    background: white;
+}
+thead{
+    background: black;
+    color: white;
+    font-size: 36px;   
+}
