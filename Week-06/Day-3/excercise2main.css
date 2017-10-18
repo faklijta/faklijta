@@ -1,0 +1,34 @@
+body{
+    background: #eeeeee;
+}
+
+.container {
+    background: #ffffff;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    height: 600px;
+    width: 960px;
+    display: flex;
+    flex-flow: column;
+}
+.container:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.green {
+    background: #51D400;
+    height: 33.33%;
+}
+.yellow{
+    background: #FFD62A;
+    height: 33.33%;
+}
+.purple {
+    background: #B02AFF;
+    height: 33.33%;
+}
+.item {
+    width: 960px; 
+}
