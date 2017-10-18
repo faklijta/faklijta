@@ -1,0 +1,80 @@
+body{
+    background: #313841;
+}
+.container {
+    height: 600px;
+    width: 960px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.trash {
+    text-align: center;
+    line-height: 100px;
+    height: 80px;
+    width: 80px;
+    background: black;
+}
+.trash :first-child {
+    color: white;
+}
+.container_on_hover{
+    height: 400px;
+    width: 960px;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    filter: brightness(0%)
+}
+.redtrash {
+    text-align: center;
+    line-height: 100px;
+    height: 80px;
+    width: 80px;
+    background: black;
+    position: relative;
+}
+.fa-trash {
+    color: red;
+}
+.delete {
+    background: red;
+    color: white;
+    width: 180px;
+    height: 80px;
+    font-size: 36px;
+    position: absolute;
+    left: 80px;
+    top: -36px;
+}
+.check {
+    text-align: center;
+    line-height: 100px;
+    height: 80px;
+    width: 80px;
+    background: black;
+    color: white;
+    position: relative;
+}
+.sure {
+    background: green;
+    color: white;
+    width: 180px;
+    height: 80px;
+    font-size: 36px;
+    position: absolute;
+    left: 80px;
+    top: -36px;
+}
+.fa-check {
+    margin: 12px;
+    color: green;
+}
+.trash:hover + .container_on_hover{
+    filter: brightness(100%)
+}
