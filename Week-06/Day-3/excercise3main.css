@@ -1,0 +1,41 @@
+body{
+    background: #2F3060;
+}
+.container {
+    height: 600px;
+    width: 960px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+}
+.item {
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    height: 100px;
+    width: 200px;
+    margin: 50px;
+    border-radius: 5px;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.blue {
+    background: linear-gradient(to bottom, #4665A5, #375493);
+    box-shadow: 0px -2px 0 #5577BF, 0px 5px 0 #26396D;
+}
+.green {
+    background: linear-gradient(to bottom, #1DAF5B, #17A04D);
+    box-shadow: 0px -2px 0 #55D38B, 0px 5px 0 #166A40;
+}
+.red {
+    background: linear-gradient(to bottom, #D74836, #CF3D2D);
+    box-shadow: 0px -2px 0 #DC6453, 0px 5px 0 #862B2F;
+}
+.item:hover{
+    filter: brightness(110%);
+}
+
+.item:active{
+    filter: brightness(90%);
+}
