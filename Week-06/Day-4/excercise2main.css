@@ -1,0 +1,25 @@
+
+.container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(13rem, auto);
+    grid-gap: 10px;    
+    background: #170224;
+}
+.purple{
+    background: #B02AFF;
+}
+.green {
+    background: #51D400;
+    grid-row: 1 / 3;
+    grid-column: 2 / 4;
+    display: grid;
+}
+.yellow{
+    background: #FFD62A;
+    width: 70%;
+    height: 70%;
+    justify-self: center;
+    align-self: center; 
+}
