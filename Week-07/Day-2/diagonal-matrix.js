@@ -29,3 +29,8 @@ for (i = 0; i < size; i++){
 }
 
 console.log(matrix);
+
+var size2 = 3;
+for (i = 0; i < size - 1; i++) {
+    console.log('0 '.repeat(size2-size2 + i) + '1 ' + '0 '.repeat(size-2-i))
+}
