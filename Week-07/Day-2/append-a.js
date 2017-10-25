@@ -1,12 +1,5 @@
 'use strict';
-// - Create a variable named `am` and assign the value `kuty` to it
-// - Write a function called `appendA` that gets a string as an input
-//   and appends an 'a' character to its end
-// - Print the result of `appendA(am)` to the console
-
-let am = "kuty";
-var append = function appendA(input) {
-    var newInput = input + 'a';
-    return newInput;
-}
-console.log(append(am))
+// - Create a variable named `nimals`
+//   with the following content: `["kuty", "macsk", "cic"]`
+// - Add all elements an `"a"` at the end
+// - try to use built in functions instead of loops
