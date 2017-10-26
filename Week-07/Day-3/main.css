@@ -1,0 +1,19 @@
+.main-button {
+    background-color: green;
+    transition: ease-in 0.5s;
+}
+.main-button:hover {
+    background-color: lime;
+}
+.main-button:active {
+    transform: translate(4px, 4px);
+}
+.main-paragraph {
+    background: grey;
+    border: 1px solid black;
+    transition: ease-in 0.2s;
+}
+.main-paragraph.changed {
+    background: salmon;
+    border: 5px dotted blue;
+}
