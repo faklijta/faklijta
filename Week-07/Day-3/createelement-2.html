@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Workshop: CreateElement</title>
+</head>
+<body>
+  <h1>The candyshop has:</h1>
+  <ul class="candyshop">
+    <li>1 Mega juicy candy</li>
+  </ul>
+
+  <!-- You can work in the html or in a separate js file. Like:
+  <script>
+    Remove the Mega juicy candy from the list.
+    Add 16 list items saying 'Empty box' to the list and add an index to it, like:
+    Empty box #1
+    Empty box #2
+    Empty box #3
+    ...
+  </script>
+  OR -->
+<script>
+    var ulList = document.querySelector('ul');
+    var toRemove = document.querySelector('li');
+    ulList.removeChild(toRemove);
+    for (var i = 1; i < 17; i++) {
+        var newLi = document.createElement('li');
+        ulList.appendChild(newLi);
+        newLi.textContent = 'Empty box # ' + i
+    }
+</script>
+</body>
+</html>
