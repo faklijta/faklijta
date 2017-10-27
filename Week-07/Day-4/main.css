@@ -1,0 +1,44 @@
+body {
+    background: grey;
+    position: relative;
+    display: flex;
+}
+
+.container-top {
+    position: absolute;
+    width: 800px;
+    height: 400px;
+    top: 100px;
+    left: 250px;
+    display: flex;
+    background: white;
+    flex-direction: row;
+    margin: 0, auto;
+}
+.main {
+    /* background-image: url("images/img_01.jpg");
+    background-position: center;
+    background-size: 250px, 150px;
+    background-repeat: no-repeat;
+    border-right: solid grey; */
+    background-color: yellow;
+    width: 70%;
+}
+nav {
+    background-color: black;
+    width: 15%;
+}
+
+.container-bottom {
+    position: absolute;
+    top: 500px;
+    left: 250px;
+    display: flex;
+    width: 800px;
+    height: 100px;
+    background: blue;
+    flex-direction: row;
+}
+ul {
+    list-style-type: none;
+}
