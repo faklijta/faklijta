@@ -9,19 +9,40 @@ let galery = [{'title': 'Boys', 'description': 'Cuties', 'url': 'images/img_01.j
 
 let thumbnails = document.querySelector('.galery');
 
-galery.forEach(function(element) {
+
+galery.forEach(function(element, i) {
     let img = document.createElement('img');
-    img.setAttribute('src', element['url']);
+    img.style.backgroundImage = 'url(' + galery[i].url + ')';
     img.classList.add('photos');
     thumbnails.appendChild(img);
 });
+let smallPics = document.querySelectorAll('.photos')
+let mainImg = document.querySelector('.main');
+let imgIndex = 0;
 
-// let thumbnImage = document.querySelectorAll('photos');
-// thumbnImage.forEach(function(element, i) {
-//     element.addEventlistener('click', function() {
-//         onClick(i);
-//     }, false);
-// })
+function bigPic (index) {
+    mainImg.style.backgroundImage = 'url(' + galery[imgIndex].url + ')'
+}
+bigPic();
 
-let mainImge = document.querySelector('.big-pic');
-mainImge.setAttribute('src', 'images/img_01.jpg');
+let toLeft = document.querySelector('.left')
+let toRight = document.querySelector('.right')
+
+toLeft.addEventListener('click', function() {
+    imgIndex += 1;
+    bigPic();
+})
+
+toRight.addEventListener('click', function() {
+    imgIndex -= 1;
+    bigPic();
+})
+
+Array.from(smallPics).forEach(function(element, i) {
+    element.addEventListener('click', function() {
+        imgIndex = i;
+        bigPic();
+    })
+})  
+console.log(typeof(toLeft))
+

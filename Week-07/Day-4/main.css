@@ -16,7 +16,7 @@ body {
     margin: 0, auto;
 }
 .main {
-    background-image: url('images/img_01.jpg');
+    /* background-image: url(''); */
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -51,4 +51,7 @@ nav {
     height: 50px;
     width: 50px;
     margin: 10px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
