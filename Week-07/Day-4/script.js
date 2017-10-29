@@ -29,12 +29,12 @@ let toLeft = document.querySelector('.left')
 let toRight = document.querySelector('.right')
 
 toLeft.addEventListener('click', function() {
-    imgIndex += 1;
+    imgIndex -= 1;
     bigPic();
 })
 
 toRight.addEventListener('click', function() {
-    imgIndex -= 1;
+    imgIndex += 1;
     bigPic();
 })
 
@@ -44,5 +44,6 @@ Array.from(smallPics).forEach(function(element, i) {
         bigPic();
     })
 })  
-console.log(typeof(toLeft))
+
+console.log(toLeft)
 
