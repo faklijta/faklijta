@@ -8,7 +8,6 @@
 // If the poBox matches the targetBox only that case call the dispatchFunction
 
 function postMaster(poBox, dispatchFunction) {
-    let po_box = poBox;
     return function(targetBox, message){
         if (targetBox === poBox){
             dispatchFunction(message);
