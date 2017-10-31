@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Users</title>
+</head>
+<body>
+    <script src="users.js"></script>
+    <script>    
+        // The users variables comes from the file included above
+        console.log(users.length)
+        // First select from the list the users whose bitcoin address AND email address is provided
+        let targeted = users.filter(function(x){
+            return x.email != null && x.bitcoin_address !=null
+        })
+        console.log(targeted)
+
+        var singleUser = targeted.map(function(x) {
+            return {'full_name ': x.first_name + ' ' + x.last_name, 'address': {'bitcoin': x.bitcoin_address, 'email': x.email}}
+        })
+        console.log(singleUser)
+
+
+    </script>
+</body>
+</html>
