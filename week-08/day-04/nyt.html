@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <content><ul></ul></content>
+    <script>
+        'use strict';
+        var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=ecb015029b20462fbfa4d244b3bd797c&begin_date=19690416&q=moon+landing+apollo+11&limit=10";
+        
+        var myRequest = new XMLHttpRequest();
+        myRequest.open("GET", url, false);
+        myRequest.send(null);
+        
+        var myContent = JSON.parse(myRequest.response);
+        console.log(myContent);
+        
+        
+        var contentUl = document.querySelector('ul');
+        
+        myContent.response.docs.forEach(function(article) {
+            if(article['snippet'].search('a') != -1){
+                var br = document.createElement('br');
+                var newLi = document.createElement('li');
+                let newAnchor = document.createElement('a');
+                newAnchor.setAttribute('href', article['web_url'])
+                newAnchor.textContent = 'main';
+                newLi.innerText = article['headline'].main+ "\n" + article['snippet'] +"\n"+ article['pub_date'];
+                newLi.appendChild(br);
+                contentUl.appendChild(newLi);
+                contentUl.appendChild(newAnchor);
+                contentUl.appendChild(br);
+            }
+            
+        });
+    </script>
+</body>
+</html>
