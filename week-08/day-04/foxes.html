@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main"><img src="" alt="">
+    </div>
+    <div class= "thumbnails"></div>
+    <script>
+        'use strict';
+        function foxes ( callback ) {
+            let xhr = new XMLHttpRequest();
+            xhr.open('GET','https://api.giphy.com/v1/stickers/search?api_key=EbmpWGuoN3Pt5ObmRuAaKfvjKzlaMySe&q=fox&limit=16&offset=0&rating=G&lang=en');
+            xhr.onreadystatechange = function() {
+                if(xhr.readyState == 4) {
+                    let requestAPI = JSON.parse(xhr.response).data
+                    callback( requestAPI );
+                }
+            }
+            xhr.send()
+        }
+        function renderFoxes( foxData ) {
+            for (let i = 0; i < 16; i++){
+                var thumbnailImg = document.createElement('img');
+                var thumbnails = document.querySelector(".thumbnails");
+                thumbnailImg.setAttribute('src',foxData[i].images.fixed_width_small_still.url);
+                thumbnails.appendChild(thumbnailImg);
+            };
+            }
+        window.onload = foxes(renderFoxes);
+
+    </script>
+</body>
+</html>
