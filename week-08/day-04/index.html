@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    </style>
+  </head>
+  <body>
+    <div class="main"><img src="" alt="">
+    </div>
+    <div class= "thumbnails"></div>
+    <script>
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://api.giphy.com/v1/stickers/search?api_key=EbmpWGuoN3Pt5ObmRuAaKfvjKzlaMySe&q=fox&limit=16&offset=0&rating=G&lang=en", false);
+        xhr.send(null);
+        var requestAPI = JSON.parse(xhr.response);
+        var thumbnails = document.querySelector(".thumbnails");
+        var bigContainer = document.querySelector(".main");
+        console.log(xhr)
+        for (let i = 0; i < 16; i++){
+            var thumbnailImg = document.createElement('img');
+            var mainImg = document.querySelector('.main img');
+            thumbnailImg.setAttribute('src',requestAPI.data[i].images.fixed_width_small_still.url);
+            thumbnails.appendChild(thumbnailImg);
+        };  
+        var thumbnailImgList = document.querySelectorAll(".thumbnails img");
+
+        thumbnailImgList.forEach(function(element, i) {
+            element.addEventListener('click', function(){
+                clickOn(i);
+                console.log('click')
+            });
+        }, this);
+        function clickOn(i){
+          mainImg.setAttribute('src', requestAPI.data[i].images.downsized.url)
+            console.log(requestAPI)
+        };
+    
+    </script>   
+</body>
+</html>
