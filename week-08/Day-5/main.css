@@ -67,21 +67,26 @@ li {
 }
 .buttons > div {
     margin-right: 10px;
+
 }
 .upvote {
     background-image: url("upvote.png");
-    height: 20px;
-    width: 20px;
+    height: 40px;
+    width: 40px;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .downvote {
     background-image: url("downvote.png");
-    height: 20px;
-    width: 20px;
+    height: 40px;
+    width: 40px;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .vote {
-
+    font-size: 30px;
+    margin-right: 10px;
+}
+.loaded {
+    display: flex;
 }
