@@ -29,6 +29,10 @@
                 var thumbnails = document.querySelector(".thumbnails");
                 thumbnailImg.setAttribute('src',foxData[i].images.fixed_width_small_still.url);
                 thumbnails.appendChild(thumbnailImg);
+                thumbnailImg.addEventListener('click', function(){
+                    var mainImg = document.querySelector('.main img');
+                    mainImg.setAttribute('src', foxData[i].images.downsized.url);
+                })
             };
             }
         window.onload = foxes(renderFoxes);
