@@ -13,30 +13,22 @@
     </div>
     <div class= "thumbnails"></div>
     <script>
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET", "https://api.giphy.com/v1/stickers/search?api_key=EbmpWGuoN3Pt5ObmRuAaKfvjKzlaMySe&q=fox&limit=16&offset=0&rating=G&lang=en", false);
+        let xhr = new XMLHttpRequest();
+        let api = "https://api.giphy.com/v1/stickers/search?api_key=EbmpWGuoN3Pt5ObmRuAaKfvjKzlaMySe&q=fox&limit=16&offset=0&rating=G&lang=en";
+        xhr.open("GET", api, false);
         xhr.send(null);
         var requestAPI = JSON.parse(xhr.response);
         var thumbnails = document.querySelector(".thumbnails");
-        var bigContainer = document.querySelector(".main");
-        console.log(xhr)
         for (let i = 0; i < 16; i++){
             var thumbnailImg = document.createElement('img');
             var mainImg = document.querySelector('.main img');
             thumbnailImg.setAttribute('src',requestAPI.data[i].images.fixed_width_small_still.url);
             thumbnails.appendChild(thumbnailImg);
-        };  
-        var thumbnailImgList = document.querySelectorAll(".thumbnails img");
-        thumbnailImgList.forEach(function(element, i) {
-            element.addEventListener('click', function(){
-                clickOn(i);
-                console.log('click')
-            });
-        }, this);
-        function clickOn(i){
-          mainImg.setAttribute('src', requestAPI.data[i].images.downsized.url)
-            console.log(requestAPI)
-        };
+            thumbnailImg.addEventListener('click',function(){
+                var mainImg = document.querySelector('.main img');
+                    mainImg.setAttribute('src', requestAPI.data[i].images.downsized.url);
+            })
+        }; 
     
     </script>   
 </body>
