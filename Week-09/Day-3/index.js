@@ -15,5 +15,16 @@ app.get('/doubling', function(request, response){
     }
 });
 
+app.get('/greeter', function(request, response){
+    if (request.query.name === undefined){
+        response.json({'error' : "Please provide a name!"});
+    }
+    if (request.query.title === undefined){
+        response.json({'error' : "Please provide a title!"});
+    }
+    else{
+        response.json({'welcome_message' : 'Oh, hi there '+ request.query.name + ', my dear '+ request.query.title +'!'});
+    }
+});
 
 app.listen(8080);
