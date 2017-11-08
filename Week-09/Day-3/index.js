@@ -8,7 +8,11 @@ app.get('/', function(request, response) {
 });
 
 app.get('/doubling', function(request, response){
-    response.json({'received' : request.query.input, 'result' : request.query.input*2});
+    if (request.query.input === undefined){
+        response.json({'error' : "Please provide an input!"});
+    } else{
+        response.json({'received' : request.query.input, 'result' : request.query.input*2});
+    }
 });
 
 
