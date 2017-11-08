@@ -27,4 +27,8 @@ app.get('/greeter', function(request, response){
     }
 });
 
+app.get('/appenda/:input', function(request, response){
+    response.json({'appended' : request.params.input + 'a'});
+});
+
 app.listen(8080);
