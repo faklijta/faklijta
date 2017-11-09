@@ -5,7 +5,7 @@ let app = express();
 let conn = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "Alex1124",
+  password: "root",
   database: 'bookstore'
 });
 
@@ -18,10 +18,6 @@ conn.connect(function(err){
   }
 });
 
-// conn.query("SELECT book_name FROM book_mast;",function(err,rows){
-//     console.log("Data received from Db:\n");
-//     console.log(rows);
-// });
 
 app.get('/', function(req, res) {
   conn.query('SELECT book_name FROM book_mast;',function(err,rows){
