@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+div {
+    margin: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.container {
+    display: flex;
+    height: 440px;
+    width: 750px;
+    position: relative;
+    margin: 10% auto;
+    background: #F5F5F5;
+    color: #474545;
+    box-shadow: 4px 4px 5px 0px rgba(71,69,69,1);
+    border-radius: 10px;
+}
+
+.logo {
+    background: url(assets/foxplayer.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 0px;
+    width: 110px;
+    height: 110px;
+    
+}
+
+.playlist {
+    line-height: 50px;
+    position: absolute;
+    top: 110px;
+    width: 355px;
+    height: 260px;
+}
+
+.playlist :nth-child(odd){
+    background: #EAEAEA;
+}
+
+.currently {
+    background: yellow;
+    position: absolute;
+    right: 0px;
+    width: 50%;
+    height: 65px;
+}
+
+.artwork {
+    background: orange;
+    width: 135px;
+    height: 135px;
+    position: absolute;
+    left: 220px; 
+    z-index: 1;
+}
+
+.tracks {
+    width: 375px; 
+    height: 295px;
+    position: absolute;
+    top: 75px;
+    right: 0px;
+}
+.tracks :nth-child(odd) {
+    background: #EAEAEA;
+    line-height: 50px;
+}
+
+.control {
+    background: white;
+    width: 740px;
+    height: 50px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.addfav {
+    height: 40px;
+    width: 40px;
+    background: url(C:\Users\Attila\Desktop\faklijta\Week-10\Day-1\assets\star.svg)
+}
+.addplay {
+
+    line-height: 40px;
+    font-size: 40px;
+}
