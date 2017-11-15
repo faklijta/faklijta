@@ -130,14 +130,6 @@ div.tracks > div:nth-child(odd) {
     background-position: center;
 }
 
-.play{
-    height: 20px;
-    width: 20px;
-    background-image: url(assets/play.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
 .forward{
     height: 20px;
     width: 20px;
@@ -153,16 +145,7 @@ div.tracks > div:nth-child(odd) {
     background-repeat: no-repeat;
     background-position: center;
 }
-.volume{
-    height: 20px;
-    width: 20px;
-    background-image: url(assets/volume.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-}
-div.control > .counter {
- width: 300px;
-}
+
 body{
     position: relative;
 }
@@ -171,8 +154,7 @@ body{
     width: 300px;
     height: 100px;
     border: 3px solid gray;
-    position: absolute;
-    top: 0px;
-    left: 0px;
     display: none;
+    background: grey;
+    z-index: 2;
 }

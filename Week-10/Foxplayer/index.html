@@ -8,6 +8,12 @@
     <title>Document</title>
 </head>
 <body>
+    <article class="dialog">
+        <div class="close">×</div>
+        <h1></h1>
+        <input type="text">
+        <button>ADD</button>
+    </article>
     <div class="container">
         <div class="logo"></div>
         <div class="artwork"></div>
@@ -23,29 +29,18 @@
             <h2>Playlists
                 <div class="addnew">+</div>
             </h2>
-
+            <h4>All Tracks</h4>
         </div>
         <div class="tracks">
             </div>
-        </div>
         <div class="control">
             <div class="rewind"></div>
-            <div class="play"></div>
             <div class="forward"></div>
-            <div>3:02</div>
-            <input type="range" class="counter">
-            <div>1:02</div>  
+            <audio controls="controls" controlsList="nodownload" src="assets/music/Ars_Sonor_-_02_-_Never_Give_Up.mp3"
+            autoplay></audio>
             <div class="shuffle"></div> 
-            <div class="volume"></div>             
-            <input type="range">
         </div>
     </div>
-    <article class="dialog">
-        <div class="close">×</div>
-        <h1></h1>
-        <input type="text">
-        <button>ACTION</button>
-    </article>
     <script src="playlist_module.js"></script>
     <script src="tracklist_module.js"></script>
     <!-- <script src="tracklist_info_module.js"></script>

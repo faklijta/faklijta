@@ -14,12 +14,13 @@ const tracklist = function() {
             let duration = document.createElement('p')
             duration.textContent = item.duration
             newTrack.appendChild(duration)
+            }
             // let htmlString =`<!-- <div class="track">
             //     <p>${tracks.title}</p>
             //     <p>${tracks.duration}</p>
             //     </div>`
             // document.querySelector('.tracks').appendChild(htmlString)
-        }
+        // }
         )
     };
         let highlight = () => {};
@@ -36,4 +37,3 @@ const tracklist = function() {
 };
     let newTracklist = tracklist()
     newTracklist.render()
-    
