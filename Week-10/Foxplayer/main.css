@@ -86,7 +86,7 @@ div.tracks > div:nth-child(odd) {
     height: 50px;
     position: absolute;
     bottom: 0px;
-    right: 38px;
+    right: 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
