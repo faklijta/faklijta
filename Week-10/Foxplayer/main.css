@@ -1,0 +1,175 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+div {
+    margin: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.container {
+    display: flex;
+    height: 440px;
+    width: 750px;
+    position: relative;
+    margin: 10% auto;
+    background: #F5F5F5;
+    color: #5C5A5A;
+    box-shadow: 4px 4px 5px 0px rgba(71,69,69,1);
+    border-radius: 10px;
+}
+
+.logo {
+    background: url(assets/foxplayer.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 0px;
+    width: 110px;
+    height: 110px;
+    
+}
+
+.playlist {
+    line-height: 50px;
+    position: absolute;
+    top: 110px;
+    width: 355px;
+    height: 260px;
+}
+
+.playlist :nth-child(odd){
+    background: #EAEAEA;
+}
+.addnew {
+    display: inline;
+    position: relative;
+    left: 60px;
+}
+
+.currently {
+    position: absolute;
+    right: 0px;
+    width: 50%;
+    height: 65px;
+}
+
+.artwork {
+    background-image: url(assets/spice.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    left: 195px; 
+    z-index: 1;
+}
+
+.tracks {
+    width: 375px; 
+    height: 295px;
+    position: absolute;
+    top: 75px;
+    right: 0px;
+    line-height: 50px;
+}
+div.tracks > div:nth-child(odd) {
+    background: #EAEAEA;
+
+}
+
+.control {
+    background: white;
+    width: 740px;
+    height: 50px;
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.addfav {
+    height: 30px;
+    width: 30px;
+    background-image: url(assets/star.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.addplay {
+    height: 30px;
+    width: 30px;
+    background-image: url(assets/add.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    right: 0px;
+    width: 12%;
+    height: 65px;
+    line-height: 65px;
+}
+
+.track {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rewind{
+    height: 20px;
+    width: 20px;
+    background-image: url(assets/rewind.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.play{
+    height: 20px;
+    width: 20px;
+    background-image: url(assets/play.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.forward{
+    height: 20px;
+    width: 20px;
+    background-image: url(assets/forward.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.shuffle{
+    height: 20px;
+    width: 20px;
+    background-image: url(assets/shuffle.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.volume{
+    height: 20px;
+    width: 20px;
+    background-image: url(assets/volume.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+div.control > .counter {
+ width: 300px;
+}
+body{
+    position: relative;
+}
+
+.dialog {
+    width: 300px;
+    height: 100px;
+    border: 3px solid gray;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
