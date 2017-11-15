@@ -55,14 +55,16 @@ div {
 }
 
 .artwork {
-    background-image: url(assets/spice.png);
+    background-image: url(assets/music-placeholder.png);
     background-repeat: no-repeat;
     background-size: cover;
     width: 160px;
     height: 160px;
     position: absolute;
-    left: 195px; 
+    left: 200px; 
     z-index: 1;
+    margin: 0;
+    border-top: 1px solid #F5F5F5;
 }
 
 .tracks {
@@ -84,6 +86,7 @@ div.tracks > div:nth-child(odd) {
     height: 50px;
     position: absolute;
     bottom: 0px;
+    right: 38px;
     display: flex;
     justify-content: space-between;
     align-items: center;
