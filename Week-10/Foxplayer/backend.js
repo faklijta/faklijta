@@ -5,18 +5,61 @@ var app = express();
 app.use('/', express.static('./'));
 express.json.type = "application/json";
 app.use(express.json());
+const mysql = require("mysql");
+
+const conn = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "root",
+    database: "Foxplayer"
+  });
+
+conn.connect(function(err){
+if(err){
+    console.log("Error connecting to Db");
+    return;
+}
+console.log("Connection to audio database established");
+});
+
 
 app.get('/', function(req, res) {
-    res.sendFile(__dirname + '/../day-1/index.html');    
+    res.sendFile(__dirname + 'index.html');    
 });
 
 app.get('/playlists', function(req, res) {
-    let result = [
-        { "id": 1, "title": "Favorites", "system": 1},
-        { "id": 2, "title": "Music for programming", "system": 0},
-        { "id": 3, "title": "Driving", "system": 0},
-        { "id": 5, "title": "Fox house", "system": 0}]
-    res.json(result);
+    let result = [];
+        const query = "SELECT * FROM playlists";
+        conn.query(query, function(err,rows){
+          if(err) {
+            console.log("PARA", err.toString());
+            return;
+          } else {
+            rows.forEach(row => {
+              result.push(row);
+            });
+          }
+          res.send(result);
+        });
 });
-  
-app.listen(3000);
+
+app.get('/tracklist', function get(req, res){
+
+    let result = [];
+    const query = "SELECT * FROM tracklist";
+    conn.query(query, function(err,rows){
+      if(err) {
+        console.log("Error", err.toString());
+        return;
+      } else {
+        rows.forEach(row => {
+          result.push(row);
+        });
+      }
+      res.send(result);
+    });
+  });
+
+app.listen(3000, function(){
+    console.log( 'Server is running');
+});
