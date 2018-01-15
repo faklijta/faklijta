@@ -18,9 +18,9 @@ def duplicate_remover2(numbers)
   numbers.each do |e|
     new_list << e unless new_list.include?(e)
   end
-  print(new_list)
+  new_list
 end
 
 list_of_numbers = [1, 2, 3, 3, 5, 2]
 
-duplicate_remover2(list_of_numbers)
+print(duplicate_remover2(list_of_numbers))
